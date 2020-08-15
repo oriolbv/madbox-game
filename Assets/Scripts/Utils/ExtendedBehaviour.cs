@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Extension of MonoBehaviour to easly use Coroutines
+/// </summary>
 public class ExtendedBehaviour : MonoBehaviour
 {
     public void Wait(float seconds, Action action)

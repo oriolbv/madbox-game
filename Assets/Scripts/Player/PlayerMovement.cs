@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// Controls all the physics and animations of our character
+/// </summary>
 [RequireComponent(typeof(Rigidbody), typeof(Animator))]
 public class PlayerMovement : ExtendedBehaviour
 {
@@ -39,18 +43,23 @@ public class PlayerMovement : ExtendedBehaviour
             animator.SetTrigger("idle");
             isMoving = false;
         }
-//#elif UNITY_IOS || UNITY_ANDROID
-//        if (Input.touchCount > 0)
-//        {
-//            animator.SetTrigger("walk");
-
-//            isMoving = true;
-//        }
-//        if (Input.touchCount == 0)
-//        {
-//            animator.SetTrigger("idle");
-//            isMoving = false;
-//        }
+#elif UNITY_IOS || UNITY_ANDROID
+        if (Input.touchCount > 0)
+        {
+            if (!isMoving) 
+            {
+                animator.SetTrigger("walk");
+                isMoving = true;
+            }
+        }
+        if (Input.touchCount == 0)
+        {
+            if (isMoving) 
+            {
+                animator.SetTrigger("idle");
+                isMoving = false;
+            }
+        }
 #endif
         if (isMoving)
         {

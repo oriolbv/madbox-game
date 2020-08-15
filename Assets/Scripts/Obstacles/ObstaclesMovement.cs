@@ -2,13 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Movements of the different obstacles using infinite move points
+/// </summary>
 public class ObstaclesMovement : MonoBehaviour
 {
+    [Header("Move Points")]
     public GameObject[] MovePoints;
-    public GameObject Player;
-    int current = 0;
-    public float speed;
-    float WPradius = 1;
+    
+    [Header("Physics")]
+    public float Speed;
+
+    // Internal Variables
+    private int current = 0;
+    private float WPradius = 1;
 
     void Update()
     {
@@ -20,22 +27,7 @@ public class ObstaclesMovement : MonoBehaviour
                 current = 0;
             }
         }
-        transform.position = Vector3.MoveTowards(transform.position, MovePoints[current].transform.position, Time.deltaTime * speed);
+        transform.position = Vector3.MoveTowards(transform.position, MovePoints[current].transform.position, Time.deltaTime * Speed);
 
     }
-
-    //void OnTriggerEnter(Collider n)
-    //{
-    //    if (n.gameObject == player)
-    //    {
-    //        player.transform.parent = transform;
-    //    }
-    //}
-    //void OnTriggerExit(Collider n)
-    //{
-    //    if (n.gameObject == player)
-    //    {
-    //        player.transform.parent = null;
-    //    }
-    //}
 }

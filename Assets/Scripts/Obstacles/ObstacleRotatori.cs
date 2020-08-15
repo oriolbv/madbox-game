@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls all the physics and animations of our character
+/// </summary>
 public class ObstacleRotatori : MonoBehaviour
 {
     [Header("Physics")]
