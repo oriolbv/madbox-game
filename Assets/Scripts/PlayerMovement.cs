@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : ExtendedBehaviour
 {
     [Header("Components")]
-    //private Transform transform;
     private Rigidbody rb;
     private Animator animator;
 
@@ -27,7 +26,6 @@ public class PlayerMovement : ExtendedBehaviour
         animator = this.GetComponentInChildren<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
 #if UNITY_STANDALONE || UNITY_WEBPLAYER
