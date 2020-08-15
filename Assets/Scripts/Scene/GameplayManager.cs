@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 
 /// <summary>
 /// Manages the general behaviours of the scene
@@ -21,7 +18,6 @@ public class GameplayManager : Singleton<GameplayManager>
 
     // Internal variables
     private bool hasStarted = false;
-    private bool enemyInstantiated = false;
 
     // Start is called before the first frame update
     void Start()
