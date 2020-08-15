@@ -46,22 +46,22 @@ public class PlayerMovement : ExtendedBehaviour
                 isMoving = false;
             }
 #elif UNITY_IOS || UNITY_ANDROID
-        if (Input.touchCount > 0)
-        {
-            if (!isMoving) 
+            if (Input.touchCount > 0)
             {
-                animator.SetTrigger("walk");
-                isMoving = true;
+                if (!isMoving) 
+                {
+                    animator.SetTrigger("walk");
+                    isMoving = true;
+                }
             }
-        }
-        if (Input.touchCount == 0)
-        {
-            if (isMoving) 
+            if (Input.touchCount == 0)
             {
-                animator.SetTrigger("idle");
-                isMoving = false;
+                if (isMoving) 
+                {
+                    animator.SetTrigger("idle");
+                    isMoving = false;
+                }
             }
-        }
 #endif
             if (isMoving)
             {

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// finishes the game if the player or any enemy arrives at the end of the level
+/// </summary>
 public class Finish : ExtendedBehaviour
 {
     void OnCollisionEnter(Collision collision)

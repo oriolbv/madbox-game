@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
+/// <summary>
+/// Manages the general behaviours of the scene
+/// </summary>
 public class GameplayManager : Singleton<GameplayManager>
 {
 

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls all the physics and animations of the enemies spawned
+/// </summary>
 public class EnemyMovement : ExtendedBehaviour
 {
     [Header("Components")]

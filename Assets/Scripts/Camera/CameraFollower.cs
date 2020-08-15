@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controls the camera movement
+/// </summary>
 public class CameraFollower : MonoBehaviour
 {
     [Tooltip("Target object for the camera")]

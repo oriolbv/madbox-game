@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Controls all the physics and animations of our character
+/// Controls the rotation of the obstacle
 /// </summary>
 public class ObstacleRotatori : MonoBehaviour
 {
