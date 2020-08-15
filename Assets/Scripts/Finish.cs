@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Finish : MonoBehaviour
+public class Finish : ExtendedBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,9 @@ public class Finish : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             Debug.Log("YOU WIN! :)");
+            Wait(2f, () => {
+                SceneManager.LoadScene("MainScene");
+            });
         }
     }
 }
