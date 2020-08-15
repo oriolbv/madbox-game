@@ -8,7 +8,7 @@ It took me 5 hours to finish this exercise. The last hour and a half I've been c
 
 **The parts that were difficult for you and why**
 
-The most difficult part for me was the begining of the project, the moment when I have to think of what I have to do and how.
+The most difficult part for me was the begining of the project, the moment when I have to think of what I have to do and how. After that, the development has been very enjoyable.
 
 **The parts you think you could do better and how**
 
