@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody), typeof(Animator))]
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : ExtendedBehaviour
 {
     [Header("Components")]
     //private Transform transform;
@@ -63,5 +64,17 @@ public class PlayerMovement : MonoBehaviour
     void MoveForward()
     {
         this.transform.Translate(0f, 0f, 1f * walkSpeed * Time.deltaTime);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Obstacle"))
+        {
+            Debug.Log("YOU LOSE! :(");
+            animator.SetTrigger("death");
+            Wait(2f, () => {
+                SceneManager.LoadScene("MainScene");
+            });
+        }
     }
 }
