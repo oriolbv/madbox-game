@@ -12,7 +12,7 @@ The most difficult part for me was the begining of the project, the moment when 
 
 **The parts you think you could do better and how**
 
-The game needs some materials to feel more alive and not a simple test. Also I would try to use Navmesh agents and some AI technique to improve enemies results and hinder the game substantially.
+The game needs some materials and better character animations to feel more alive and not a simple test game. Also I would try to use Navmesh agents and some AI technique to improve enemies results and hinder the game substantially. In terms of code, I would implement an FSM for the Player character and the Enemy in order to have a better code architecture.
 
 **What you would do if you could go a step further on this game**
 
