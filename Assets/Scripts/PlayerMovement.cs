@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody), typeof(Animator))]
 public class PlayerMovement : ExtendedBehaviour
@@ -70,9 +69,7 @@ public class PlayerMovement : ExtendedBehaviour
         {
             Debug.Log("YOU LOSE! :(");
             animator.SetTrigger("death");
-            Wait(2f, () => {
-                SceneManager.LoadScene("MainScene");
-            });
+            GameplayManager.Instance.FinishGame(false);
         }
     }
 }

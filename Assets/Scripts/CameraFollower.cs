@@ -8,7 +8,7 @@ public class CameraFollower : MonoBehaviour
     public Transform target;
 
     [Tooltip("Offset of camera with target")]
-    public Vector3 offset = new Vector3(0, 3, -10);
+    public Vector3 offset = new Vector3(2, 4, 5);
 
     void Update()
     {

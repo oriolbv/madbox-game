@@ -12,6 +12,7 @@ public class EnemyMovement : ExtendedBehaviour
     [Tooltip("Enemy Eggy walk speed")]
     [Range(0, 10)]
     public float walkSpeed = 5;
+    
 
     // Internal variables
     private bool isMoving = true;
@@ -42,12 +43,11 @@ public class EnemyMovement : ExtendedBehaviour
     {
         if (collision.collider.CompareTag("Obstacle"))
         {
-            Debug.Log("YOU LOSE! :(");
             isMoving = false;
             animator.SetTrigger("death");
-            //Wait(2f, () => {
-            //    SceneManager.LoadScene("MainScene");
-            //});
+
+            GameplayManager.Instance.DestroyEnemy(this.gameObject);
+            
         }
     }
 }

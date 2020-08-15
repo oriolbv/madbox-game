@@ -29,6 +29,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6236294, y: 0.56345105, z: 0.39095345}
   m_Center: {x: -0.008915275, y: 0.2679416, z: 0.11007345}
+--- !u!114 &-7565348760062602882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2523717711988399880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdfaf3e62ca22a4b881a63a10434dcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 5
+  startPoint: {x: 8, y: 1, z: -1}
 --- !u!1001 &8633463382467357938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39,7 +53,7 @@ PrefabInstance:
     - target: {fileID: 6113129443287446522, guid: 81d35405532595242ae188b029ab83b7,
         type: 3}
       propertyPath: m_Name
-      value: EggyEnemy
+      value: EggyEnemy Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6113129443287805914, guid: 81d35405532595242ae188b029ab83b7,
         type: 3}
