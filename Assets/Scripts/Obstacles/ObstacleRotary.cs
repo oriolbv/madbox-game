@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Controls the rotation of the obstacle
 /// </summary>
-public class ObstacleRotatori : MonoBehaviour
+public class ObstacleRotary : MonoBehaviour
 {
     [Header("Physics")]
     public float SpinSpeed = 40f;
