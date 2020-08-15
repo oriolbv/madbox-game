@@ -2,17 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMovement : MonoBehaviour
+public class CameraFollower : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Tooltip("Target object for the camera")]
+    public Transform target;
 
-    // Update is called once per frame
+    [Tooltip("Offset of camera with target")]
+    public Vector3 offset = new Vector3(0, 3, -10);
+
     void Update()
     {
-        
+        // Check if target is a valid object 
+        if (target != null)
+        {
+            // Set camera position and rotation to the target
+            transform.position = target.position + offset;
+            transform.LookAt(target);
+        }
+
     }
 }

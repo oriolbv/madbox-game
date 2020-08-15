@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Physics")]
     [Tooltip("Eggy walk speed")]
     [Range(0, 10)]
-    public float walkSpeed = 5;
+    public float walkSpeed = 2;
 
 
     // Internal variables
