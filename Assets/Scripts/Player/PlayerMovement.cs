@@ -31,18 +31,20 @@ public class PlayerMovement : ExtendedBehaviour
 
     void Update()
     {
+        if (GameplayManager.Instance.HasStarted)
+        {
 #if UNITY_STANDALONE || UNITY_WEBPLAYER
-        if (Input.GetMouseButtonDown(0))
-        {
-            animator.SetTrigger("walk");
+            if (Input.GetMouseButtonDown(0))
+            {
+                animator.SetTrigger("walk");
 
-            isMoving = true;
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            animator.SetTrigger("idle");
-            isMoving = false;
-        }
+                isMoving = true;
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                animator.SetTrigger("idle");
+                isMoving = false;
+            }
 #elif UNITY_IOS || UNITY_ANDROID
         if (Input.touchCount > 0)
         {
@@ -61,10 +63,12 @@ public class PlayerMovement : ExtendedBehaviour
             }
         }
 #endif
-        if (isMoving)
-        {
-            MoveForward();
+            if (isMoving)
+            {
+                MoveForward();
+            }
         }
+
     }
 
     void MoveForward()

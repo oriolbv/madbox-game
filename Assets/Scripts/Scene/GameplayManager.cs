@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class GameplayManager : Singleton<GameplayManager>
 {
@@ -11,13 +12,25 @@ public class GameplayManager : Singleton<GameplayManager>
     public Vector3 EnemyStartPoint = new Vector3(8, 1, -1);
     public Transform Enemy;
 
-    [Header("Text")]
+    [Header("UI")]
+    public GameObject StartPanel;
     public Text FinishText;
+
+    // Internal variables
+    private bool hasStarted = false;
+    private bool enemyInstantiated = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        StartPanel.SetActive(true);
         Instantiate(Enemy, EnemyStartPoint, Enemy.rotation);
+    }
+
+    public void StartGame()
+    {
+        hasStarted = true;
+        StartPanel.SetActive(false);
     }
 
     public void SpawnNewEnemy()
@@ -54,5 +67,14 @@ public class GameplayManager : Singleton<GameplayManager>
         });
     }
 
+    #region Properties
+    public bool HasStarted
+    {
+        get
+        {
+            return hasStarted;
+        }
+    }
 
+    #endregion
 }

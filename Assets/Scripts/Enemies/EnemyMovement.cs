@@ -27,10 +27,12 @@ public class EnemyMovement : ExtendedBehaviour
 
     void Update()
     {
-        
-        if (isMoving)
+        if (GameplayManager.Instance.HasStarted)
         {
-            MoveForward();
+            if (isMoving)
+            {
+                MoveForward();
+            }
         }
     }
 
