@@ -16,7 +16,7 @@ The game needs some materials and better character animations to feel more alive
 
 **What you would do if you could go a step further on this game**
 
-I would convert this game into an endless runner, adding coins and objects, and maybe some kind of dash movement dragging the finger from up to bottom of the screen. The objects that the player collects during the runs can be used in the following ones. 
+I would convert this game into an endless runner, adding coins and objects, and maybe some kind of dash movement dragging the finger from up to bottom of the screen. The objects that the player collects during the runs could be used in the following ones. 
 With that, we would have a little bit more complex game with a fun progression, continuity and depth mechanics.
 
 **What did you think**
